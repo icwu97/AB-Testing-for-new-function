@@ -69,7 +69,7 @@ Denominator = Cumulative app usage count (cumulative count of users who enrolled
 The calculated p-value > 0. 05 shows that this difference is not significant. There is no significant difference in retention rates between the experimental and control groups.
 The new feature can be deployed.
 
-# Conclution
+# Conclusion
 However, it is important to note that the penetration rate of the new feature in the experimental group was less than 20%. This indicates that a majority of the users in the experimental group did not actually click to enter the Snapshot interface. We can imporve low version coverage to be validated by comparing the penetration rates of the new version between the experimental and control groups. Regardless of the reasons, we can be certain that even if only a small portion of the experimental group experienced the new feature, it has already brought significant benefits!
 
 
