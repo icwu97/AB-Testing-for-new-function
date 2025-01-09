@@ -24,7 +24,16 @@ from scipy.stats import norm
 norm.ppf(0.975)
 ```
 Minmum sample size:
-![image](https://github.com/user-attachments/assets/32c1dbfd-5eb4-4846-b227-08c2c383483b)
+```
+alpha = 0.05
+power = 0.8
+delta = 450*0.005 # Statistically, the average usage duration of InstaMagnet per person over the past two weeks is calculated. It is expected that SnapFlicks will bring a minimum improvement of 0.5% to the product metric.
+SD = 120 # The standard deviation of the metric based on the data collected over the past two weeks is calculated.
+variance = SD**2
+sample_size = 2 * (norm.ppf(1 - alpha / 2) + norm.ppf(power)) ** 2 * variance / (delta ** 2)
+#calculate the minimum sample size
+print('The minimal sample size for each group is',round(sample_size))
+```
 
 According to our calculations, the minimum sample size required for a single experimental group is X. Since we have two groups, the minimum sample size required for the experiment would be approximately 2X.
 
