@@ -75,7 +75,7 @@ plt.show()
 <img src="https://github.com/user-attachments/assets/4aa5e5df-5c63-4b2d-a786-bc187125a7f4" width="400" height="200">
 
 ```
-#narmality test
+#normality test
 import scipy.stats as stats
 k2, p = stats.normaltest(dfA['app use hours'])
 alpha = 0.05  # significance level
