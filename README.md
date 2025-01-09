@@ -72,7 +72,7 @@ import matplotlib.pyplot as plt
 plt.hist(dfA['app use hours'], bins=100, color='blue', alpha=0.7)
 plt.show()
 ```
-![app use hours](https://github.com/user-attachments/assets/4aa5e5df-5c63-4b2d-a786-bc187125a7f4)
+<img src="https://github.com/user-attachments/assets/4aa5e5df-5c63-4b2d-a786-bc187125a7f4" width="400" height="200">
 
 ```
 #narmality test
@@ -104,6 +104,7 @@ plt.hist(dfA['app use times'], bins=40, color='blue', alpha=0.7)
 plt.show()
 ```
 <img src="https://github.com/user-attachments/assets/9816772a-3162-4abb-ae60-a373fa4dccf6" width="400" height="200">
+
 ```
 #normality test
 import scipy.stats as stats
