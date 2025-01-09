@@ -18,7 +18,11 @@ H0 - Hypothesis to be challenged, H1 - Hypothesis to be supported.
 
 α represents the Type I error rate (False Positive: rejecting the null hypothesis), and β represents the Type II error rate (False Negative: accepting the null hypothesis). The typical values for α are 0.05. Power can be calculated as 1 - β, representing the probability of correctly rejecting the null hypothesis when it is false.
 
-![image](https://github.com/user-attachments/assets/8f226c3f-2bae-46b1-95f3-58c10958febd)
+```
+from scipy.stats import norm
+#norm.ppf() takes a percentage and returns a standard deviation multiplier for what value that percentage occurs at for a one-tail test on a standard normal distribution
+norm.ppf(0.975)
+```
 Minmum sample size:
 ![image](https://github.com/user-attachments/assets/32c1dbfd-5eb4-4846-b227-08c2c383483b)
 
