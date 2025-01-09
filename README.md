@@ -132,7 +132,11 @@ Next-day app retention (split by enrollment date):
 Numerator = Cumulative retention count (users who enrolled on the 1st and used the app on the 2nd day) + (users who enrolled on the 2nd and used the app on the 3rd day) + ... + (users who enrolled on the 30th and used the app on the 31st day).
 Denominator = Cumulative app usage count (cumulative count of users who enrolled).
 
-![image](https://github.com/user-attachments/assets/22b9d4c0-9aad-4848-81db-b1576312d3a1)
+```
+from statsmodels.stats.proportion import proportions_ztest
+zscore, pvalue = proportions_ztest(retained, all_obs)
+print('zscore = {:.4f}, pvalue = {:.4f}'.format(zscore, pvalue))
+```
 
 The calculated p-value > 0. 05 shows that this difference is not significant. There is no significant difference in retention rates between the experimental and control groups.
 The new feature can be deployed.
