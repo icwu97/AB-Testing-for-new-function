@@ -40,7 +40,14 @@ According to our calculations, the minimum sample size required for a single exp
 # Test Cycle
 
 Once the minimum sample size is calculated, we can proceed with conducting the experiment A/B testing.
-![image](https://github.com/user-attachments/assets/f3b76b39-bbd3-4433-8975-9b2fd362133d)
+```
+DAU = 8000000 # The current average daily active user count in Mexico.
+proportion = 0.001 #A single experiment consumes 0.1% of the traffic.
+total_sample = sample_size*2 # The minimum sample size for a single group multiplied by 2 groups.
+test_duration = total_sample / (DAU*proportion)
+# Compute the cycle
+print('AB test result will be available after',round(test_duration),'days')
+```
 
 # Hypothesis Testing for Average Metrics
 
