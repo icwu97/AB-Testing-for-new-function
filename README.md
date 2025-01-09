@@ -52,26 +52,74 @@ print('AB test result will be available after',round(test_duration),'days')
 # Hypothesis Testing for Average Metrics
 
 When conducting hypothesis testing for average metrics, normality, independence, homogeneity of variance, and adequate sample size are need to be satisfied.
-
-![image](https://github.com/user-attachments/assets/3efc12cf-d03b-459c-9807-66cfb4692ea1)
-![image](https://github.com/user-attachments/assets/db54f8c7-90bf-41a6-96e2-bdb91ba8e2db)
-
+```
+#input data
+import pandas as pd
+dfA = pd.read_excel('AB_test_sample.xlsx', sheet_name = 'GroupA')
+dfB = pd.read_excel('AB_test_sample.xlsx', sheet_name = 'GroupB')
+```
+```
+#The control group data.
+dfA.describe()
+```
+```
+#The experimental group data.
+dfB.describe()
+```
 ## The average usage duration per person
-![image](https://github.com/user-attachments/assets/a78ca662-83cf-4336-a909-711f8f7a5001)
+```
+import matplotlib.pyplot as plt
+plt.hist(dfA['app use hours'], bins=100, color='blue', alpha=0.7)
+plt.show()
+```
 
-![image](https://github.com/user-attachments/assets/2f3f5328-829b-4145-80c6-b6c9ec8aa44c)
+```
+#narmality test
+import scipy.stats as stats
+k2, p = stats.normaltest(dfA['app use hours'])
+alpha = 0.05  # significance level
+if p < alpha:
+    print("Sample data does not follow normal distribution, p =", p)
+else:
+    print("Sample data follows normal distribution, p =", p)
+```
 
-![image](https://github.com/user-attachments/assets/7ca7ed25-370c-4929-9f55-01d7e8023523)
+```
+#T-test
+import scipy.stats as stats
+
+group1 = dfA['app use hours']
+group2 = dfB['app use hours']
+stats.ttest_ind(a=group1, b=group2, equal_var=True)
+```
 
 Since the p-value is less than or equal to 0.05, we reject the null hypothesis. This means that the average time spent using the app in the experimental group is significantly higher than in the control group. Since the average time people use the app is our main metric, this result is critical.
 
 ## The average number of app usage per person.
 
-![image](https://github.com/user-attachments/assets/e101f354-7b66-4d57-8704-4be29bf5285b)
+```
+import matplotlib.pyplot as plt
+plt.hist(dfA['app use times'], bins=40, color='blue', alpha=0.7)
+plt.show()
+```
 
-![image](https://github.com/user-attachments/assets/33e66ad5-4479-432b-8ad1-d6e337b00270)
+```
+#normality test
+import scipy.stats as stats
+k2, p = stats.normaltest(dfA['app use times'])
+alpha = 0.05  # significance level
+if p < alpha:
+    print("Sample data does not follow normal distribution, p =", p)
+else:
+    print("Sample data follows normal distribution, p =", p)
+```
 
-![image](https://github.com/user-attachments/assets/269ca2ca-ca28-4050-89e4-d543f9c9a80a)
+```
+#average number of app usage per person
+group1 = dfA['app use times']
+group2 = dfB['app use times']
+stats.ttest_ind(a=group1, b=group2, equal_var=True)
+```
 
 Since the p-value is less than or equal to 0.05, we reject the null hypothesis. This means that  the average number of app usage per person in the experimental group is significantly higher than that in the control group.
 
