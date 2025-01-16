@@ -23,6 +23,7 @@ from scipy.stats import norm
 norm.ppf(0.975)
 ```
 1.959963984540054
+The result, 1.959963984540054, represents the z-score where 97.5% of the data lies below this value (or equivalently, 2.5% lies above this value).
 
 ## Power of the Test Determination: (Minimum sample size)
 
