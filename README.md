@@ -17,8 +17,6 @@ We will formulate the hypotheses we want to validate in the experiment:
 - H1: The new version of Insta with Snapshot is more favored by users.
 
 
-α represents the Type I error rate (False Positive: rejecting the null hypothesis), and β represents the Type II error rate (False Negative: accepting the null hypothesis). The typical values for α are 0.05. Power can be calculated as 1 - β, representing the probability of correctly rejecting the null hypothesis when it is false.
-
 ```
 from scipy.stats import norm
 #norm.ppf() takes a percentage and returns a standard deviation multiplier for what value that percentage occurs at for a one-tail test on a standard normal distribution
