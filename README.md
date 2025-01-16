@@ -13,8 +13,8 @@ By doing this small experiment in Mexico, we can see how the Snapshot feature af
 
 We will formulate the hypotheses we want to validate in the experiment:
 
-H0: No difference between the original version and the new version of Instagram.
-H1: The new version of Insta with Snapshot is more favored by users.
+- H0: No difference between the original version and the new version of Instagram.
+- H1: The new version of Insta with Snapshot is more favored by users.
 
 
 α represents the Type I error rate (False Positive: rejecting the null hypothesis), and β represents the Type II error rate (False Negative: accepting the null hypothesis). The typical values for α are 0.05. Power can be calculated as 1 - β, representing the probability of correctly rejecting the null hypothesis when it is false.
