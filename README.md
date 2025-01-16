@@ -14,7 +14,7 @@ By doing this small experiment in Mexico, we can see how the Snapshot feature af
 We will formulate the hypotheses we want to validate in the experiment:
 
 - H0: No difference between the original version and the new version of Instagram.
-- H1: The new version of Insta with Snapshot is more favored by users.
+- H1: The new version of Instagran with Snapshot is more favored by users.
 
 
 ```
