@@ -1,8 +1,10 @@
-# AB-Testing-for-new-function
+# Instagram A/B Testing
 
 # Background
 
-From the existing Insta users in Mexico, and split them into two groups: Group A (control group) and Group B (experimental group). sers in Group A will remain unchanged and continue to see the original version of the Insta interface. Users in Group B, the experimental group, will experience a configuration change upon opening the app. They will see the Snapshot icon on the home screen and have access to the newly launched short video function.
+Instagram conducted an A/B test to evaluate the impact of its newly launched feature, Snapshot, designed to allow users to share short video clips on the platform alongside photos. This feature aims to diversify content, enhance user experience, and increase overall engagement. 
+
+The test was carried out in Mexico, from the existing Instagram users in Mexico, where users were divided into two groups, and split them into two groups: Group A (control group) and Group B (experimental group). Users in Group A will remain unchanged and continue to see the original version of the Insta interface. Users in Group B, the experimental group, will experience a configuration change upon opening the app. They will see the Snapshot icon on the home screen and have access to the newly launched short video function.
 
 By doing this small experiment in Mexico, we can see how the Snapshot feature affects how often users interact with it and check if it could do well in the Latin American market.
 
@@ -11,10 +13,9 @@ By doing this small experiment in Mexico, we can see how the Snapshot feature af
 
 We will formulate the hypotheses we want to validate in the experiment:
 
-H0: The original version of Insta is more favored by users.
+H0: No difference between the original version and the new version of Instagram.
 H1: The new version of Insta with Snapshot is more favored by users.
 
-H0 - Hypothesis to be challenged, H1 - Hypothesis to be supported.
 
 α represents the Type I error rate (False Positive: rejecting the null hypothesis), and β represents the Type II error rate (False Negative: accepting the null hypothesis). The typical values for α are 0.05. Power can be calculated as 1 - β, representing the probability of correctly rejecting the null hypothesis when it is false.
 
@@ -23,7 +24,9 @@ from scipy.stats import norm
 #norm.ppf() takes a percentage and returns a standard deviation multiplier for what value that percentage occurs at for a one-tail test on a standard normal distribution
 norm.ppf(0.975)
 ```
-Minmum sample size:
+1.959963984540054
+
+Power of the Test Determination:
 ```
 alpha = 0.05
 power = 0.8
@@ -34,8 +37,9 @@ sample_size = 2 * (norm.ppf(1 - alpha / 2) + norm.ppf(power)) ** 2 * variance / 
 #calculate the minimum sample size
 print('The minimal sample size for each group is',round(sample_size))
 ```
+The minimal sample size for each group is 44651.
 
-According to our calculations, the minimum sample size required for a single experimental group is X. Since we have two groups, the minimum sample size required for the experiment would be approximately 2X.
+According to our calculations, the minimum sample size required for a single experimental group is 44651. Since we have two groups, the minimum sample size required for the experiment would be 89302.
 
 # Test Cycle
 
@@ -48,6 +52,8 @@ test_duration = total_sample / (DAU*proportion)
 # Compute the cycle
 print('AB test result will be available after',round(test_duration),'days')
 ```
+AB test result will be available after 11 days.
+
 
 # Hypothesis Testing for Average Metrics
 
