@@ -232,7 +232,7 @@ The A/B testing results demonstrate that Instagram's newly introduced Snapshot f
    - Both groups follow a similar pattern, but Group B has a slight shift toward higher app usage hours, indicating improved engagement due to the Snapshot feature. The increased app usage duration directly correlates with higher ad impressions, boosting revenue potential.
 
 2. App Use Times
-   - Group B has a noticeable increase in session frequency compared to Group A, suggesting that Snapshot encourages users to open the app more often. The imapact of higher app use counts enhance engagement opportunities, increasing user habit formation and the potential for serving targeted ads.
+   - Group B has a noticeable increase in session frequency compared to Group A, suggesting that Snapshot encourages users to open the app more often. The imapact of higher app use times enhance engagement opportunities, increasing user habit formation and the potential for serving targeted ads.
 
 3. Retention Metrics
    - No statistically significant difference was observed between the two groups in terms of next-day retention rates.
