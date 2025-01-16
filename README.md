@@ -78,7 +78,7 @@ dfA.describe()
 #The experimental group data.
 dfB.describe()
 ```
-## The average usage duration per person
+## The average usage duration per person - App use hours
 ```
 import matplotlib.pyplot as plt
 
@@ -99,8 +99,8 @@ plt.legend()
 plt.show()
 
 ```
-<img src="(https://github.com/user-attachments/assets/24a520ac-48eb-41c1-8348-2fff68bd4371)" width="400" height="200">
-
+<img src="https://github.com/user-attachments/assets/d142b7b1-6148-4933-ae9a-25dda5179624" width="400" height="200">
+<img src="https://github.com/user-attachments/assets/5219a416-8060-44ef-8e20-38d2f71f427a" width="400" height="200">
 
 ```
 import matplotlib.pyplot as plt
@@ -114,6 +114,8 @@ plt.ylabel('Frequency')
 plt.legend()
 plt.show()
 ```
+<img src="https://github.com/user-attachments/assets/53b5b0da-4359-4ec1-84fa-d79d8e1637fc" width="400" height="200">
+
 
 #normality test
 ```
@@ -138,7 +140,7 @@ stats.ttest_ind(a=group1, b=group2, equal_var=True)
 Since the p-value is less than or equal to 0.05, we reject the null hypothesis. This means that the average time spent using the app in the experimental group is significantly higher than in the control group. Since the average time people use the app is our main metric, this result is critical.
 
 
-## The average number of app usage per person.
+## The average number of app usage per person. - App use times
 
 ```
 import matplotlib.pyplot as plt
@@ -160,6 +162,9 @@ plt.legend()
 plt.show()
 ```
 
+<img src="https://github.com/user-attachments/assets/a806f702-c4ec-4e63-a18a-ead71799f280" width="400" height="200">
+<img src="https://github.com/user-attachments/assets/ff5e8152-1389-4384-9398-9d1f0b581634" width="400" height="200">
+
 ```
 plt.figure(figsize=(10, 5))
 plt.hist(dfA['app use times'], bins=40, color='red', alpha=0.7, label='Group A - App Use Times')
@@ -170,11 +175,7 @@ plt.ylabel('Frequency')
 plt.legend()
 plt.show()
 ```
-
-
-<img src="https://github.com/user-attachments/assets/9816772a-3162-4abb-ae60-a373fa4dccf6" width="400" height="200">
-<img src="https://github.com/user-attachments/assets/ff5e8152-1389-4384-9398-9d1f0b581634" width="400" height="200">
-
+<img src="https://github.com/user-attachments/assets/bc0dfd51-39cb-4192-965f-4d4346688700" width="400" height="200">
 
 ```
 #normality test
