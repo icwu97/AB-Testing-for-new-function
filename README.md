@@ -138,7 +138,7 @@ stats.ttest_ind(a=group1, b=group2, equal_var=True)
 Ttest_indResult(statistic=-3.6934297450364797, pvalue=0.0002213804493662174)
 
 
-Since the p-value is less than or equal to 0.05, we reject the null hypothesis. This means that the average time spent using the app in the experimental group is significantly higher than in the control group. Since the average time people use the app is our main metric, this result is critical.
+Since the p-value is less than 0.05, we reject the null hypothesis (H0). This means that the average time spent using the app in the experimental group is significantly higher than in the control group. Since the average time people use the app is our main metric, this result is critical.
 
 
 ## The average number of app usage per person. - App use times
@@ -192,7 +192,6 @@ else:
 ```
 Sample data follows normal distribution, p = 0.4616520932198871
 
-
 ```
 #average number of app usage per person
 group1 = dfA['app use times']
@@ -201,7 +200,7 @@ stats.ttest_ind(a=group1, b=group2, equal_var=True)
 ```
 Ttest_indResult(statistic=-5.6512085520876845, pvalue=1.5980360297263646e-08)
 
-Since the p-value is less than or equal to 0.05, we reject the null hypothesis. This means that the average number of app usage per person in the experimental group is significantly higher than that in the control group.
+Since the p-value is less than 0.05, we reject the null hypothesis (H0). This means that the average number of app usage per person in the experimental group is significantly higher than that in the control group.
 
 # Hypothesis testing for retention metrics
 
