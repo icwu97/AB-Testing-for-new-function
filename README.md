@@ -40,12 +40,12 @@ delta = 450*0.005 # Statistically, the average usage duration of InstaMagnet per
 SD = 120 # The standard deviation of the metric based on the data collected over the past two weeks is calculated.
 variance = SD**2
 sample_size = 2 * (norm.ppf(1 - alpha / 2) + norm.ppf(power)) ** 2 * variance / (delta ** 2)
-#calculate the minimum sample size
-print('The minimal sample size for each group is',round(sample_size))
+#calculate the power of determination
+print('The power of determination for each group is',round(sample_size))
 ```
-The minimal sample size for each group is 44651.
+The power of determination for each group is 44651.
 
-According to our calculations, the minimum sample size required for a single experimental group is 44651. Since we have two groups, the minimum sample size required for the experiment would be 89302.
+According to our calculations, the power of determination required for a single experimental group is 44651. Since we have two groups, the power of determination required for the experiment would be 89302.
 
 # Test Cycle
 
