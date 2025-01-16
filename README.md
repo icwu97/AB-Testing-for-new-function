@@ -117,7 +117,7 @@ plt.show()
 <img src="https://github.com/user-attachments/assets/53b5b0da-4359-4ec1-84fa-d79d8e1637fc" width="400" height="200">
 
 
-#normality test
+## Normality test
 ```
 import scipy.stats as stats
 k2, p = stats.normaltest(dfA['app use hours'])
@@ -127,6 +127,7 @@ if p < alpha:
 else:
     print("Sample data follows normal distribution, p =", p)
 ```
+Sample data follows normal distribution, p = 0.4538848510421052
 
 ```
 #T-test
@@ -136,6 +137,8 @@ group1 = dfA['app use hours']
 group2 = dfB['app use hours']
 stats.ttest_ind(a=group1, b=group2, equal_var=True)
 ```
+Ttest_indResult(statistic=-3.6934297450364797, pvalue=0.0002213804493662174)
+
 
 Since the p-value is less than or equal to 0.05, we reject the null hypothesis. This means that the average time spent using the app in the experimental group is significantly higher than in the control group. Since the average time people use the app is our main metric, this result is critical.
 
@@ -177,8 +180,10 @@ plt.show()
 ```
 <img src="https://github.com/user-attachments/assets/bc0dfd51-39cb-4192-965f-4d4346688700" width="400" height="200">
 
+
+## Normality test
+
 ```
-#normality test
 import scipy.stats as stats
 k2, p = stats.normaltest(dfA['app use times'])
 alpha = 0.05  # significance level
@@ -187,6 +192,8 @@ if p < alpha:
 else:
     print("Sample data follows normal distribution, p =", p)
 ```
+Sample data follows normal distribution, p = 0.4616520932198871
+
 
 ```
 #average number of app usage per person
@@ -194,6 +201,7 @@ group1 = dfA['app use times']
 group2 = dfB['app use times']
 stats.ttest_ind(a=group1, b=group2, equal_var=True)
 ```
+Ttest_indResult(statistic=-5.6512085520876845, pvalue=1.5980360297263646e-08)
 
 Since the p-value is less than or equal to 0.05, we reject the null hypothesis. This means that  the average number of app usage per person in the experimental group is significantly higher than that in the control group.
 
@@ -211,6 +219,7 @@ from statsmodels.stats.proportion import proportions_ztest
 zscore, pvalue = proportions_ztest(retained, all_obs)
 print('zscore = {:.4f}, pvalue = {:.4f}'.format(zscore, pvalue))
 ```
+zscore = 0.9323, pvalue = 0.3512
 
 The calculated p-value > 0. 05 shows that this difference is not significant. There is no significant difference in retention rates between the experimental and control groups.
 The new feature can be deployed.
