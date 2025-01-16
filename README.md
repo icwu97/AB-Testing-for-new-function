@@ -173,6 +173,8 @@ plt.show()
 
 
 <img src="https://github.com/user-attachments/assets/9816772a-3162-4abb-ae60-a373fa4dccf6" width="400" height="200">
+![Group B _ app use hours](https://github.com/user-attachments/assets/6e869466-102a-4955-a151-5d3d67bc81c2)
+
 
 ```
 #normality test
