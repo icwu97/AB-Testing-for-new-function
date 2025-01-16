@@ -99,8 +99,7 @@ plt.legend()
 plt.show()
 
 ```
-<img src="(https://github.com/user-attachments/assets/24a520ac-48eb-41c1-8348-2fff68bd4371)
-" width="400" height="200">
+<img src="(https://github.com/user-attachments/assets/24a520ac-48eb-41c1-8348-2fff68bd4371)" width="400" height="200">
 
 
 ```
