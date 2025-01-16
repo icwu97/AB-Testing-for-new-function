@@ -26,7 +26,7 @@ norm.ppf(0.975)
 ```
 1.959963984540054
 
-## Power of the Test Determination:
+## Power of the Test Determination: (Minimum sample size)
 
 For Instagram's A/B test of the Snapshot feature, the power of the determination was calculated to assess three key metrics: 
 - The average usage duration per person, which measures how long users spend engaging with the app.
@@ -49,7 +49,7 @@ According to our calculations, the power of determination required for a single 
 
 # Test Cycle
 
-Once the minimum sample size is calculated, we can proceed with conducting the experiment A/B testing.
+Once the power of determination is calculated, we can proceed with conducting the experiment A/B testing.
 ```
 DAU = 8000000 # The current average daily active user count in Mexico.
 proportion = 0.001 #A single experiment consumes 0.1% of the traffic.
