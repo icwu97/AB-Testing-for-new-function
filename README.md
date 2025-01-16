@@ -26,7 +26,13 @@ norm.ppf(0.975)
 ```
 1.959963984540054
 
-Power of the Test Determination:
+## Power of the Test Determination:
+
+For Instagram's A/B test of the Snapshot feature, the power of the determination was calculated to assess three key metrics: 
+- The average usage duration per person, which measures how long users spend engaging with the app.
+- The average number of app usage sessions per person, which captures user frequency and interaction levels.
+- The hypothesis testing for retention metrics, which evaluates whether users return to the app after their initial engagement. 
+These metrics were used to determine whether the new feature significantly impacts user engagement and retention and evaluation of Snapshot's effectiveness.
 ```
 alpha = 0.05
 power = 0.8
