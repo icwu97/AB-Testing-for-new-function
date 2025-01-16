@@ -81,13 +81,43 @@ dfB.describe()
 ## The average usage duration per person
 ```
 import matplotlib.pyplot as plt
-plt.hist(dfA['app use hours'], bins=100, color='blue', alpha=0.7)
+
+plt.figure(figsize=(10, 5))
+plt.hist(dfA['app use hours'], bins=100, color='red', alpha=0.7, label='Group A')
+plt.title('Distribution of App Use Hours: Group A')
+plt.xlabel('App Use Hours')
+plt.ylabel('Frequency')
+plt.legend()
 plt.show()
-```
-<img src="https://github.com/user-attachments/assets/4aa5e5df-5c63-4b2d-a786-bc187125a7f4" width="400" height="200">
+
+plt.figure(figsize=(10, 5))
+plt.hist(dfB['app use hours'], bins=100, color='green', alpha=0.7, label='Group B')
+plt.title('Distribution of App Use Hours: Group B')
+plt.xlabel('App Use Hours')
+plt.ylabel('Frequency')
+plt.legend()
+plt.show()
 
 ```
+<img src="(https://github.com/user-attachments/assets/24a520ac-48eb-41c1-8348-2fff68bd4371)
+" width="400" height="200">
+
+
+```
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(10, 5))
+plt.hist(dfA['app use hours'], bins=100, color='red', alpha=0.7, label='Group A')
+plt.hist(dfB['app use hours'], bins=100, color='green', alpha=0.7, label='Group B')
+plt.title('Distribution of App Use Hours: Group A vs. Group B')
+plt.xlabel('App Use Hours')
+plt.ylabel('Frequency')
+plt.legend()
+plt.show()
+```
+
 #normality test
+```
 import scipy.stats as stats
 k2, p = stats.normaltest(dfA['app use hours'])
 alpha = 0.05  # significance level
@@ -108,13 +138,41 @@ stats.ttest_ind(a=group1, b=group2, equal_var=True)
 
 Since the p-value is less than or equal to 0.05, we reject the null hypothesis. This means that the average time spent using the app in the experimental group is significantly higher than in the control group. Since the average time people use the app is our main metric, this result is critical.
 
+
 ## The average number of app usage per person.
 
 ```
 import matplotlib.pyplot as plt
-plt.hist(dfA['app use times'], bins=40, color='blue', alpha=0.7)
+
+plt.figure(figsize=(10, 5))
+plt.hist(dfA['app use times'], bins=35, color='red', alpha=0.7, label='Group A')
+plt.title('Distribution of App Use Times: Group A')
+plt.xlabel('App Use Times')
+plt.ylabel('Frequency')
+plt.legend()
+plt.show()
+
+plt.figure(figsize=(10, 5))
+plt.hist(dfB['app use times'], bins=35, color='green', alpha=0.7, label='Group B')
+plt.title('Distribution of App Use Times: Group B')
+plt.xlabel('App Use Times')
+plt.ylabel('Frequency')
+plt.legend()
 plt.show()
 ```
+
+```
+plt.figure(figsize=(10, 5))
+plt.hist(dfA['app use times'], bins=40, color='red', alpha=0.7, label='Group A - App Use Times')
+plt.hist(dfB['app use times'], bins=40, color='green', alpha=0.7, label='Group B - App Use Times')
+plt.title('Distribution of App Use Times: Group A vs. Group B')
+plt.xlabel('App Use Times')
+plt.ylabel('Frequency')
+plt.legend()
+plt.show()
+```
+
+
 <img src="https://github.com/user-attachments/assets/9816772a-3162-4abb-ae60-a373fa4dccf6" width="400" height="200">
 
 ```
