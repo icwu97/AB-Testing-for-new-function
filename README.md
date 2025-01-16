@@ -203,7 +203,7 @@ stats.ttest_ind(a=group1, b=group2, equal_var=True)
 ```
 Ttest_indResult(statistic=-5.6512085520876845, pvalue=1.5980360297263646e-08)
 
-Since the p-value is less than or equal to 0.05, we reject the null hypothesis. This means that  the average number of app usage per person in the experimental group is significantly higher than that in the control group.
+Since the p-value is less than or equal to 0.05, we reject the null hypothesis. This means that the average number of app usage per person in the experimental group is significantly higher than that in the control group.
 
 # Hypothesis testing for retention metrics
 
@@ -222,10 +222,22 @@ print('zscore = {:.4f}, pvalue = {:.4f}'.format(zscore, pvalue))
 zscore = 0.9323, pvalue = 0.3512
 
 The calculated p-value > 0. 05 shows that this difference is not significant. There is no significant difference in retention rates between the experimental and control groups.
-The new feature can be deployed.
+The new feature still can be deployed.
 
 # Conclusion
-However, it is important to note that the penetration rate of the new feature in the experimental group was less than 20%. This indicates that a majority of the users in the experimental group did not actually click to enter the Snapshot interface. We can imporve low version coverage to be validated by comparing the penetration rates of the new version between the experimental and control groups. Regardless of the reasons, we can be certain that even if only a small portion of the experimental group experienced the new feature, it has already brought significant benefits!
+
+The A/B testing results demonstrate that Instagram's newly introduced Snapshot feature has a significant impact on user engagement metrics, the observed engagement improvements highlight the potential business value of the new feature:
+
+1. App Use Hours
+   - Both groups follow a similar pattern, but Group B has a slight shift toward higher app usage hours, indicating improved engagement due to the Snapshot feature. The increased app usage duration directly correlates with higher ad impressions, boosting revenue potential.
+
+2. App Use Times
+   - Group B has a noticeable increase in session frequency compared to Group A, suggesting that Snapshot encourages users to open the app more often. The imapact of higher app use counts enhance engagement opportunities, increasing user habit formation and the potential for serving targeted ads.
+
+3. Retention Metrics
+   - No statistically significant difference was observed between the two groups in terms of next-day retention rates.
+  
+The A/B test results show that the experimental group (Group B) outperformed the control group (Group A) in key engagement metrics, such as app use hours and app use times. Group B users spent significantly more time on the app and opened it more frequently, indicating increased user engagement driven by the Snapshot feature. However, no significant difference was observed in next-day retention rates between the two groups. These findings suggest that while the feature effectively boosts engagement, its long-term retention impact may require further optimization. Improving the feature’s visibility and adoption rate could maximize its potential benefits for Instagram’s user experience and revenue.
 
 
 
