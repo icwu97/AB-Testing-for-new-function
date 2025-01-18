@@ -79,28 +79,6 @@ dfA.describe()
 dfB.describe()
 ```
 ## The average usage duration per person - App use hours
-```
-import matplotlib.pyplot as plt
-
-plt.figure(figsize=(10, 5))
-plt.hist(dfA['app use hours'], bins=100, color='red', alpha=0.7, label='Group A')
-plt.title('Distribution of App Use Hours: Group A')
-plt.xlabel('App Use Hours')
-plt.ylabel('Frequency')
-plt.legend()
-plt.show()
-
-plt.figure(figsize=(10, 5))
-plt.hist(dfB['app use hours'], bins=100, color='green', alpha=0.7, label='Group B')
-plt.title('Distribution of App Use Hours: Group B')
-plt.xlabel('App Use Hours')
-plt.ylabel('Frequency')
-plt.legend()
-plt.show()
-
-```
-<img src="https://github.com/user-attachments/assets/d142b7b1-6148-4933-ae9a-25dda5179624" width="400" height="200">
-<img src="https://github.com/user-attachments/assets/5219a416-8060-44ef-8e20-38d2f71f427a" width="400" height="200">
 
 ```
 import matplotlib.pyplot as plt
@@ -117,7 +95,7 @@ plt.show()
 <img src="https://github.com/user-attachments/assets/53b5b0da-4359-4ec1-84fa-d79d8e1637fc" width="400" height="200">
 
 
-## Normality test
+## Normality test & T-test
 ```
 import scipy.stats as stats
 k2, p = stats.normaltest(dfA['app use hours'])
@@ -146,29 +124,6 @@ Since the p-value is less than 0.05, we reject the null hypothesis (H0). This me
 ## The average number of app usage per person. - App use times
 
 ```
-import matplotlib.pyplot as plt
-
-plt.figure(figsize=(10, 5))
-plt.hist(dfA['app use times'], bins=35, color='red', alpha=0.7, label='Group A')
-plt.title('Distribution of App Use Times: Group A')
-plt.xlabel('App Use Times')
-plt.ylabel('Frequency')
-plt.legend()
-plt.show()
-
-plt.figure(figsize=(10, 5))
-plt.hist(dfB['app use times'], bins=35, color='green', alpha=0.7, label='Group B')
-plt.title('Distribution of App Use Times: Group B')
-plt.xlabel('App Use Times')
-plt.ylabel('Frequency')
-plt.legend()
-plt.show()
-```
-
-<img src="https://github.com/user-attachments/assets/a806f702-c4ec-4e63-a18a-ead71799f280" width="400" height="200">
-<img src="https://github.com/user-attachments/assets/ff5e8152-1389-4384-9398-9d1f0b581634" width="400" height="200">
-
-```
 plt.figure(figsize=(10, 5))
 plt.hist(dfA['app use times'], bins=40, color='red', alpha=0.7, label='Group A - App Use Times')
 plt.hist(dfB['app use times'], bins=40, color='green', alpha=0.7, label='Group B - App Use Times')
@@ -181,7 +136,7 @@ plt.show()
 <img src="https://github.com/user-attachments/assets/bc0dfd51-39cb-4192-965f-4d4346688700" width="400" height="200">
 
 
-## Normality test
+## Normality test & T-test
 
 ```
 import scipy.stats as stats
@@ -228,7 +183,7 @@ The new feature still can be deployed.
 The A/B testing results demonstrate that Instagram's newly introduced Snapshot feature has a significant impact on user engagement metrics, the observed engagement improvements highlight the potential business value of the new feature:
 
 1. App Use Hours
-   - Both groups follow a similar pattern, but Group B has a slight shift toward higher app usage hours, indicating improved engagement due to the Snapshot feature. The increased app usage duration directly correlates with higher ad impressions, boosting revenue potential.
+   - Group B proved to have a shift toward higher app usage hours, indicating improved engagement due to the Snapshot feature. The increased app usage duration directly correlates with higher ad impressions, boosting revenue potential.
 
 2. App Use Times
    - Group B has a noticeable increase in session frequency compared to Group A, suggesting that Snapshot encourages users to open the app more often. The imapact of higher app use times enhance engagement opportunities, increasing user habit formation and the potential for serving targeted ads.
