@@ -58,7 +58,7 @@ test_duration = total_sample / (DAU*proportion)
 # Compute the cycle
 print('AB test result will be available after',round(test_duration),'days')
 ```
-AB test result will be available after 11 days.
+AB test result will be available after 11 days. The 11-day test duration is to evaluate the impact of Snapshot while capturing diverse user behaviors across daily cycles. During this window, users are randomly assigned, interact with the app, and their engagement and retention metrics are recorded. This period allows Instagram to determine whether the new feature effectively improves user experience and supports decision-making for its potential rollout.
 
 
 # Hypothesis Testing for Average Metrics
